@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s0="http://tempuri.org/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://tempuri.org/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetStockQuote">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Ticker" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetStockQuoteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetStockQuoteResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SecurityHeader" type="s0:SecurityHeader" />
+      <s:complexType name="SecurityHeader">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Key" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </types>
+  <message name="GetStockQuoteSoapIn">
+    <part name="parameters" element="s0:GetStockQuote" />
+  </message>
+  <message name="GetStockQuoteSoapOut">
+    <part name="parameters" element="s0:GetStockQuoteResponse" />
+  </message>
+  <message name="GetStockQuoteSecurityHeader">
+    <part name="SecurityHeader" element="s0:SecurityHeader" />
+  </message>
+  <portType name="StockQuote_SoapSecuritySoap">
+    <operation name="GetStockQuote">
+      <input message="s0:GetStockQuoteSoapIn" />
+      <output message="s0:GetStockQuoteSoapOut" />
+    </operation>
+  </portType>
+  <portType name="StockQuote_SoapSecurityHttpGet" />
+  <portType name="StockQuote_SoapSecurityHttpPost" />
+  <binding name="StockQuote_SoapSecuritySoap" type="s0:StockQuote_SoapSecuritySoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <operation name="GetStockQuote">
+      <soap:operation soapAction="http://tempuri.org/GetStockQuote" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header d5p1:required="true" message="s0:GetStockQuoteSecurityHeader" part="SecurityHeader" use="literal" xmlns:d5p1="http://schemas.xmlsoap.org/wsdl/" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+        <soap:header d5p1:required="true" message="s0:GetStockQuoteSecurityHeader" part="SecurityHeader" use="literal" xmlns:d5p1="http://schemas.xmlsoap.org/wsdl/" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="StockQuote_SoapSecurityHttpGet" type="s0:StockQuote_SoapSecurityHttpGet">
+    <http:binding verb="GET" />
+  </binding>
+  <binding name="StockQuote_SoapSecurityHttpPost" type="s0:StockQuote_SoapSecurityHttpPost">
+    <http:binding verb="POST" />
+  </binding>
+  <service name="StockQuote_SoapSecurity">
+    <port name="StockQuote_SoapSecuritySoap" binding="s0:StockQuote_SoapSecuritySoap">
+      <soap:address location="http://localhost/ASP.NET/Chapter20/WebServices/StockQuote_SoapSecurity.asmx" />
+    </port>
+    <port name="StockQuote_SoapSecurityHttpGet" binding="s0:StockQuote_SoapSecurityHttpGet">
+      <http:address location="http://localhost/ASP.NET/Chapter20/WebServices/StockQuote_SoapSecurity.asmx" />
+    </port>
+    <port name="StockQuote_SoapSecurityHttpPost" binding="s0:StockQuote_SoapSecurityHttpPost">
+      <http:address location="http://localhost/ASP.NET/Chapter20/WebServices/StockQuote_SoapSecurity.asmx" />
+    </port>
+  </service>
+</definitions>

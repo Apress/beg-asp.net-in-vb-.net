@@ -1,0 +1,33 @@
+Microsoft Visual Studio Solution File, Format Version 7.00
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "SimpleDatabaseComponent", "..\SimpleDatabaseComponent\SimpleDatabaseComponent.vbproj", "{9F47750F-F6C1-4171-B316-5C675EE21033}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "AdBoard", "http://localhost/ASP.NET/Chapter22/AdBoard/AdBoard.vbproj", "{2794356C-872D-4F27-B1BC-A9FDE8AEDA6F}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "DataObjectComponent", "..\DataObjectComponent\DataObjectComponent.vbproj", "{F2AE1610-8A3D-4C0C-A4F9-58B43C24AD86}"
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug
+		ConfigName.1 = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{9F47750F-F6C1-4171-B316-5C675EE21033}.Debug.ActiveCfg = Debug|.NET
+		{9F47750F-F6C1-4171-B316-5C675EE21033}.Debug.Build.0 = Debug|.NET
+		{9F47750F-F6C1-4171-B316-5C675EE21033}.Release.ActiveCfg = Release|.NET
+		{9F47750F-F6C1-4171-B316-5C675EE21033}.Release.Build.0 = Release|.NET
+		{2794356C-872D-4F27-B1BC-A9FDE8AEDA6F}.Debug.ActiveCfg = Debug|.NET
+		{2794356C-872D-4F27-B1BC-A9FDE8AEDA6F}.Debug.Build.0 = Debug|.NET
+		{2794356C-872D-4F27-B1BC-A9FDE8AEDA6F}.Release.ActiveCfg = Release|.NET
+		{2794356C-872D-4F27-B1BC-A9FDE8AEDA6F}.Release.Build.0 = Release|.NET
+		{F2AE1610-8A3D-4C0C-A4F9-58B43C24AD86}.Debug.ActiveCfg = Debug|.NET
+		{F2AE1610-8A3D-4C0C-A4F9-58B43C24AD86}.Debug.Build.0 = Debug|.NET
+		{F2AE1610-8A3D-4C0C-A4F9-58B43C24AD86}.Release.ActiveCfg = Release|.NET
+		{F2AE1610-8A3D-4C0C-A4F9-58B43C24AD86}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

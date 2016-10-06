@@ -1,0 +1,27 @@
+Microsoft Visual Studio Solution File, Format Version 7.00
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "SimpleComponent", "..\SimpleComponent\SimpleComponent.vbproj", "{DF6BEC15-AC4A-4B40-89F5-372172BF1290}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "SimpleComponentTest", "http://localhost/ASP.NET/Chapter22/SimpleComponentTest/SimpleComponentTest.vbproj", "{B9C5D10E-460A-4E22-9C44-6210B3924A0E}"
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug
+		ConfigName.1 = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{DF6BEC15-AC4A-4B40-89F5-372172BF1290}.Debug.ActiveCfg = Debug|.NET
+		{DF6BEC15-AC4A-4B40-89F5-372172BF1290}.Debug.Build.0 = Debug|.NET
+		{DF6BEC15-AC4A-4B40-89F5-372172BF1290}.Release.ActiveCfg = Release|.NET
+		{DF6BEC15-AC4A-4B40-89F5-372172BF1290}.Release.Build.0 = Release|.NET
+		{B9C5D10E-460A-4E22-9C44-6210B3924A0E}.Debug.ActiveCfg = Debug|.NET
+		{B9C5D10E-460A-4E22-9C44-6210B3924A0E}.Debug.Build.0 = Debug|.NET
+		{B9C5D10E-460A-4E22-9C44-6210B3924A0E}.Release.ActiveCfg = Release|.NET
+		{B9C5D10E-460A-4E22-9C44-6210B3924A0E}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

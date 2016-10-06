@@ -1,0 +1,312 @@
+<VisualStudioProject>
+    <VisualBasic
+        ProjectType = "Web"
+        ProductVersion = "7.0.9466"
+        SchemaVersion = "1.0"
+        ProjectGuid = "{A68CCBD9-47AC-4B4B-BF81-37A74321AC6E}"
+    >
+        <Build>
+            <Settings
+                ApplicationIcon = ""
+                AssemblyKeyContainerName = ""
+                AssemblyName = "DataControls"
+                AssemblyOriginatorKeyFile = ""
+                AssemblyOriginatorKeyMode = "None"
+                DefaultClientScript = "JScript"
+                DefaultHTMLPageLayout = "Grid"
+                DefaultTargetSchema = "IE50"
+                DelaySign = "false"
+                OutputType = "Library"
+                OptionCompare = "Binary"
+                OptionExplicit = "On"
+                OptionStrict = "Off"
+                RootNamespace = "DataControls"
+                StartupObject = "DataControls.(None)"
+            >
+                <Config
+                    Name = "Debug"
+                    BaseAddress = "285212672"
+                    ConfigurationOverrideFile = ""
+                    DefineConstants = ""
+                    DefineDebug = "true"
+                    DefineTrace = "true"
+                    DebugSymbols = "true"
+                    IncrementalBuild = "true"
+                    Optimize = "false"
+                    OutputPath = "bin\"
+                    RegisterForComInterop = "false"
+                    RemoveIntegerChecks = "false"
+                    TreatWarningsAsErrors = "false"
+                    WarningLevel = "1"
+                />
+                <Config
+                    Name = "Release"
+                    BaseAddress = "285212672"
+                    ConfigurationOverrideFile = ""
+                    DefineConstants = ""
+                    DefineDebug = "false"
+                    DefineTrace = "true"
+                    DebugSymbols = "false"
+                    IncrementalBuild = "false"
+                    Optimize = "false"
+                    OutputPath = "bin\"
+                    RegisterForComInterop = "false"
+                    RemoveIntegerChecks = "false"
+                    TreatWarningsAsErrors = "false"
+                    WarningLevel = "1"
+                />
+            </Settings>
+            <References>
+                <Reference
+                    Name = "System"
+                    AssemblyName = "System"
+                />
+                <Reference
+                    Name = "System.Data"
+                    AssemblyName = "System.Data"
+                />
+                <Reference
+                    Name = "System.Drawing"
+                    AssemblyName = "System.Drawing"
+                />
+                <Reference
+                    Name = "System.Web"
+                    AssemblyName = "System.Web"
+                />
+                <Reference
+                    Name = "System.Web.Services"
+                    AssemblyName = "System.Web.Services"
+                />
+                <Reference
+                    Name = "System.XML"
+                    AssemblyName = "System.Xml"
+                />
+            </References>
+            <Imports>
+                <Import Namespace = "Microsoft.VisualBasic" />
+                <Import Namespace = "System" />
+                <Import Namespace = "System.Collections" />
+                <Import Namespace = "System.Configuration" />
+                <Import Namespace = "System.Data" />
+                <Import Namespace = "System.Drawing" />
+                <Import Namespace = "System.Web" />
+                <Import Namespace = "System.Web.UI" />
+                <Import Namespace = "System.Web.UI.HtmlControls" />
+                <Import Namespace = "System.Web.UI.WebControls" />
+            </Imports>
+        </Build>
+        <Files>
+            <Include>
+                <File
+                    RelPath = "AssemblyInfo.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "AuthorListControls.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "AuthorListControls.aspx.vb"
+                    DependentUpon = "AuthorListControls.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "AuthorListControls.aspx.resx"
+                    DependentUpon = "AuthorListControls.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "AuthorListMultipleTemplates.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "AuthorListMultipleTemplates.aspx.vb"
+                    DependentUpon = "AuthorListMultipleTemplates.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "AuthorListMultipleTemplates.aspx.resx"
+                    DependentUpon = "AuthorListMultipleTemplates.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "BasicAuthorList.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "BasicAuthorList.aspx.vb"
+                    DependentUpon = "BasicAuthorList.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "BasicAuthorList.aspx.resx"
+                    DependentUpon = "BasicAuthorList.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "BasicHTMLAuthorList.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "BasicHTMLAuthorList.aspx.vb"
+                    DependentUpon = "BasicHTMLAuthorList.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "BasicHTMLAuthorList.aspx.resx"
+                    DependentUpon = "BasicHTMLAuthorList.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "DataGridEdit.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "DataGridEdit.aspx.vb"
+                    DependentUpon = "DataGridEdit.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "DataGridEdit.aspx.resx"
+                    DependentUpon = "DataGridEdit.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "DataGridSelect.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "DataGridSelect.aspx.vb"
+                    DependentUpon = "DataGridSelect.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "DataGridSelect.aspx.resx"
+                    DependentUpon = "DataGridSelect.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "DataListEdit.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "DataListEdit.aspx.vb"
+                    DependentUpon = "DataListEdit.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "DataListEdit.aspx.resx"
+                    DependentUpon = "DataListEdit.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "DataListSelect.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "DataListSelect.aspx.vb"
+                    DependentUpon = "DataListSelect.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "DataListSelect.aspx.resx"
+                    DependentUpon = "DataListSelect.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "FancyStyleAuthorList.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "FancyStyleAuthorList.aspx.vb"
+                    DependentUpon = "FancyStyleAuthorList.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FancyStyleAuthorList.aspx.resx"
+                    DependentUpon = "FancyStyleAuthorList.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "FilterAndSort.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "FilterAndSort.aspx.vb"
+                    DependentUpon = "FilterAndSort.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "FilterAndSort.aspx.resx"
+                    DependentUpon = "FilterAndSort.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "licenses.licx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Repeater.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Repeater.aspx.vb"
+                    DependentUpon = "Repeater.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Repeater.aspx.resx"
+                    DependentUpon = "Repeater.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "SimpleDataGrid.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "SimpleDataGrid.aspx.vb"
+                    DependentUpon = "SimpleDataGrid.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "SimpleDataGrid.aspx.resx"
+                    DependentUpon = "SimpleDataGrid.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "TemplateDataGrid.aspx"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "TemplateDataGrid.aspx.vb"
+                    DependentUpon = "TemplateDataGrid.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "TemplateDataGrid.aspx.resx"
+                    DependentUpon = "TemplateDataGrid.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Web.config"
+                    BuildAction = "Content"
+                />
+            </Include>
+        </Files>
+    </VisualBasic>
+</VisualStudioProject>
+

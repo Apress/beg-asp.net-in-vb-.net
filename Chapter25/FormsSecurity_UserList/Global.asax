@@ -1,0 +1,1 @@
+<%@ Application Codebehind="Global.asax.vb" Inherits="FormsSecurity_UserList.Global" %>

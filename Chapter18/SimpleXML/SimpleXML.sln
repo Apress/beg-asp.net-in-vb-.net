@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 7.00
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "SimpleXML", "http://localhost/ASP.NET/Chapter18/SimpleXML/SimpleXML.vbproj", "{82548BEC-3DB9-4854-951D-C1C7888E1370}"
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug
+		ConfigName.1 = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{82548BEC-3DB9-4854-951D-C1C7888E1370}.Debug.ActiveCfg = Debug|.NET
+		{82548BEC-3DB9-4854-951D-C1C7888E1370}.Debug.Build.0 = Debug|.NET
+		{82548BEC-3DB9-4854-951D-C1C7888E1370}.Release.ActiveCfg = Release|.NET
+		{82548BEC-3DB9-4854-951D-C1C7888E1370}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

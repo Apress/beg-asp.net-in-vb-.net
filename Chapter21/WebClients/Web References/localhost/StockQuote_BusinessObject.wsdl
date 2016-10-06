@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s0="http://www.prosetech.com/Stocks" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://www.prosetech.com/Stocks" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.prosetech.com/Stocks">
+      <s:element name="GetStockQuote">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Ticker" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetStockQuoteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetStockQuoteResult" type="s0:StockInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="StockInfo">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Price" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="Symbol" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="High_52Week" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="Low_52Week" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="CompanyName" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="StockInfo" nillable="true" type="s0:StockInfo" />
+    </s:schema>
+  </types>
+  <message name="GetStockQuoteSoapIn">
+    <part name="parameters" element="s0:GetStockQuote" />
+  </message>
+  <message name="GetStockQuoteSoapOut">
+    <part name="parameters" element="s0:GetStockQuoteResponse" />
+  </message>
+  <message name="GetStockQuoteHttpGetIn">
+    <part name="Ticker" type="s:string" />
+  </message>
+  <message name="GetStockQuoteHttpGetOut">
+    <part name="Body" element="s0:StockInfo" />
+  </message>
+  <message name="GetStockQuoteHttpPostIn">
+    <part name="Ticker" type="s:string" />
+  </message>
+  <message name="GetStockQuoteHttpPostOut">
+    <part name="Body" element="s0:StockInfo" />
+  </message>
+  <portType name="StockQuote_BusinessObjectSoap">
+    <operation name="GetStockQuote">
+      <documentation>Gets a price quote for a NASDAQ stock symbol.</documentation>
+      <input message="s0:GetStockQuoteSoapIn" />
+      <output message="s0:GetStockQuoteSoapOut" />
+    </operation>
+  </portType>
+  <portType name="StockQuote_BusinessObjectHttpGet">
+    <operation name="GetStockQuote">
+      <documentation>Gets a price quote for a NASDAQ stock symbol.</documentation>
+      <input message="s0:GetStockQuoteHttpGetIn" />
+      <output message="s0:GetStockQuoteHttpGetOut" />
+    </operation>
+  </portType>
+  <portType name="StockQuote_BusinessObjectHttpPost">
+    <operation name="GetStockQuote">
+      <documentation>Gets a price quote for a NASDAQ stock symbol.</documentation>
+      <input message="s0:GetStockQuoteHttpPostIn" />
+      <output message="s0:GetStockQuoteHttpPostOut" />
+    </operation>
+  </portType>
+  <binding name="StockQuote_BusinessObjectSoap" type="s0:StockQuote_BusinessObjectSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <operation name="GetStockQuote">
+      <soap:operation soapAction="http://www.prosetech.com/Stocks/GetStockQuote" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="StockQuote_BusinessObjectHttpGet" type="s0:StockQuote_BusinessObjectHttpGet">
+    <http:binding verb="GET" />
+    <operation name="GetStockQuote">
+      <http:operation location="/GetStockQuote" />
+      <input>
+        <http:urlEncoded />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="StockQuote_BusinessObjectHttpPost" type="s0:StockQuote_BusinessObjectHttpPost">
+    <http:binding verb="POST" />
+    <operation name="GetStockQuote">
+      <http:operation location="/GetStockQuote" />
+      <input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+  </binding>
+  <service name="StockQuote_BusinessObject">
+    <documentation>Methods to get information about a NASDAQ stock.</documentation>
+    <port name="StockQuote_BusinessObjectSoap" binding="s0:StockQuote_BusinessObjectSoap">
+      <soap:address location="http://localhost/ASP.NET/Chapter19/WebServices/StockQuote_BusinessObject.asmx" />
+    </port>
+    <port name="StockQuote_BusinessObjectHttpGet" binding="s0:StockQuote_BusinessObjectHttpGet">
+      <http:address location="http://localhost/ASP.NET/Chapter19/WebServices/StockQuote_BusinessObject.asmx" />
+    </port>
+    <port name="StockQuote_BusinessObjectHttpPost" binding="s0:StockQuote_BusinessObjectHttpPost">
+      <http:address location="http://localhost/ASP.NET/Chapter19/WebServices/StockQuote_BusinessObject.asmx" />
+    </port>
+  </service>
+</definitions>

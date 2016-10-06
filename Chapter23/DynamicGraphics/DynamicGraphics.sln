@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 7.00
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "DynamicGraphics", "http://localhost/ASP.NET/Chapter23/DynamicGraphics/DynamicGraphics.vbproj", "{9367A01F-09F4-4A60-8611-35BFED008B4B}"
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug
+		ConfigName.1 = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{9367A01F-09F4-4A60-8611-35BFED008B4B}.Debug.ActiveCfg = Debug|.NET
+		{9367A01F-09F4-4A60-8611-35BFED008B4B}.Debug.Build.0 = Debug|.NET
+		{9367A01F-09F4-4A60-8611-35BFED008B4B}.Release.ActiveCfg = Release|.NET
+		{9367A01F-09F4-4A60-8611-35BFED008B4B}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

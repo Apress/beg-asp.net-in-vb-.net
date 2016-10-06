@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s0="http://tempuri.org/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://tempuri.org/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetStockQuote">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Ticker" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetStockQuoteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetStockQuoteResult" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetStockUsage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Ticker" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetStockUsageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetStockUsageResult" type="s0:CounterInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="CounterInfo">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="GlobalRequests" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="SessionRequests" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="decimal" type="s:decimal" />
+      <s:element name="CounterInfo" nillable="true" type="s0:CounterInfo" />
+    </s:schema>
+  </types>
+  <message name="GetStockQuoteSoapIn">
+    <part name="parameters" element="s0:GetStockQuote" />
+  </message>
+  <message name="GetStockQuoteSoapOut">
+    <part name="parameters" element="s0:GetStockQuoteResponse" />
+  </message>
+  <message name="GetStockUsageSoapIn">
+    <part name="parameters" element="s0:GetStockUsage" />
+  </message>
+  <message name="GetStockUsageSoapOut">
+    <part name="parameters" element="s0:GetStockUsageResponse" />
+  </message>
+  <message name="GetStockQuoteHttpGetIn">
+    <part name="Ticker" type="s:string" />
+  </message>
+  <message name="GetStockQuoteHttpGetOut">
+    <part name="Body" element="s0:decimal" />
+  </message>
+  <message name="GetStockUsageHttpGetIn">
+    <part name="Ticker" type="s:string" />
+  </message>
+  <message name="GetStockUsageHttpGetOut">
+    <part name="Body" element="s0:CounterInfo" />
+  </message>
+  <message name="GetStockQuoteHttpPostIn">
+    <part name="Ticker" type="s:string" />
+  </message>
+  <message name="GetStockQuoteHttpPostOut">
+    <part name="Body" element="s0:decimal" />
+  </message>
+  <message name="GetStockUsageHttpPostIn">
+    <part name="Ticker" type="s:string" />
+  </message>
+  <message name="GetStockUsageHttpPostOut">
+    <part name="Body" element="s0:CounterInfo" />
+  </message>
+  <portType name="StockQuote_SessionStateSoap">
+    <operation name="GetStockQuote">
+      <input message="s0:GetStockQuoteSoapIn" />
+      <output message="s0:GetStockQuoteSoapOut" />
+    </operation>
+    <operation name="GetStockUsage">
+      <input message="s0:GetStockUsageSoapIn" />
+      <output message="s0:GetStockUsageSoapOut" />
+    </operation>
+  </portType>
+  <portType name="StockQuote_SessionStateHttpGet">
+    <operation name="GetStockQuote">
+      <input message="s0:GetStockQuoteHttpGetIn" />
+      <output message="s0:GetStockQuoteHttpGetOut" />
+    </operation>
+    <operation name="GetStockUsage">
+      <input message="s0:GetStockUsageHttpGetIn" />
+      <output message="s0:GetStockUsageHttpGetOut" />
+    </operation>
+  </portType>
+  <portType name="StockQuote_SessionStateHttpPost">
+    <operation name="GetStockQuote">
+      <input message="s0:GetStockQuoteHttpPostIn" />
+      <output message="s0:GetStockQuoteHttpPostOut" />
+    </operation>
+    <operation name="GetStockUsage">
+      <input message="s0:GetStockUsageHttpPostIn" />
+      <output message="s0:GetStockUsageHttpPostOut" />
+    </operation>
+  </portType>
+  <binding name="StockQuote_SessionStateSoap" type="s0:StockQuote_SessionStateSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <operation name="GetStockQuote">
+      <soap:operation soapAction="http://tempuri.org/GetStockQuote" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetStockUsage">
+      <soap:operation soapAction="http://tempuri.org/GetStockUsage" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="StockQuote_SessionStateHttpGet" type="s0:StockQuote_SessionStateHttpGet">
+    <http:binding verb="GET" />
+    <operation name="GetStockQuote">
+      <http:operation location="/GetStockQuote" />
+      <input>
+        <http:urlEncoded />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+    <operation name="GetStockUsage">
+      <http:operation location="/GetStockUsage" />
+      <input>
+        <http:urlEncoded />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="StockQuote_SessionStateHttpPost" type="s0:StockQuote_SessionStateHttpPost">
+    <http:binding verb="POST" />
+    <operation name="GetStockQuote">
+      <http:operation location="/GetStockQuote" />
+      <input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+    <operation name="GetStockUsage">
+      <http:operation location="/GetStockUsage" />
+      <input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+  </binding>
+  <service name="StockQuote_SessionState">
+    <port name="StockQuote_SessionStateSoap" binding="s0:StockQuote_SessionStateSoap">
+      <soap:address location="http://localhost/ASP.NET/Chapter20/WebServices/StockQuote_SessionState.asmx" />
+    </port>
+    <port name="StockQuote_SessionStateHttpGet" binding="s0:StockQuote_SessionStateHttpGet">
+      <http:address location="http://localhost/ASP.NET/Chapter20/WebServices/StockQuote_SessionState.asmx" />
+    </port>
+    <port name="StockQuote_SessionStateHttpPost" binding="s0:StockQuote_SessionStateHttpPost">
+      <http:address location="http://localhost/ASP.NET/Chapter20/WebServices/StockQuote_SessionState.asmx" />
+    </port>
+  </service>
+</definitions>

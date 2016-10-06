@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s0="http://tempuri.org/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://tempuri.org/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="TestAuthenticated">
+        <s:complexType />
+      </s:element>
+      <s:element name="TestAuthenticatedResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TestAuthenticatedResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </types>
+  <message name="TestAuthenticatedSoapIn">
+    <part name="parameters" element="s0:TestAuthenticated" />
+  </message>
+  <message name="TestAuthenticatedSoapOut">
+    <part name="parameters" element="s0:TestAuthenticatedResponse" />
+  </message>
+  <portType name="SecuredServiceSoap">
+    <operation name="TestAuthenticated">
+      <input message="s0:TestAuthenticatedSoapIn" />
+      <output message="s0:TestAuthenticatedSoapOut" />
+    </operation>
+  </portType>
+  <binding name="SecuredServiceSoap" type="s0:SecuredServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <operation name="TestAuthenticated">
+      <soap:operation soapAction="http://tempuri.org/TestAuthenticated" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="SecuredService">
+    <port name="SecuredServiceSoap" binding="s0:SecuredServiceSoap">
+      <soap:address location="http://localhost/ASP.NET/Chapter25/SecureService/SecuredService.asmx" />
+    </port>
+  </service>
+</definitions>

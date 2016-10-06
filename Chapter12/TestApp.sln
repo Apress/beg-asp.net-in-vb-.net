@@ -1,0 +1,27 @@
+Microsoft Visual Studio Solution File, Format Version 7.00
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "TestApp", "http://localhost/ASP.NET/Chapter12/TestApp/TestApp.vbproj", "{110E393D-3DAD-4F32-8250-EE277BF32994}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "TestAppSetup", "TestAppSetup\TestAppSetup.vdproj", "{C67A5658-5679-43E2-B291-2FFAF47EDAF5}"
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug
+		ConfigName.1 = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{110E393D-3DAD-4F32-8250-EE277BF32994}.Debug.ActiveCfg = Debug|.NET
+		{110E393D-3DAD-4F32-8250-EE277BF32994}.Debug.Build.0 = Debug|.NET
+		{110E393D-3DAD-4F32-8250-EE277BF32994}.Release.ActiveCfg = Release|.NET
+		{110E393D-3DAD-4F32-8250-EE277BF32994}.Release.Build.0 = Release|.NET
+		{C67A5658-5679-43E2-B291-2FFAF47EDAF5}.Debug.ActiveCfg = Debug
+		{C67A5658-5679-43E2-B291-2FFAF47EDAF5}.Debug.Build.0 = Debug
+		{C67A5658-5679-43E2-B291-2FFAF47EDAF5}.Release.ActiveCfg = Release
+		{C67A5658-5679-43E2-B291-2FFAF47EDAF5}.Release.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal
